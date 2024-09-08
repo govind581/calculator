@@ -1,55 +1,114 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-.heading{
+
+.heading {
     background-color: #212121;
-    color: rgb(129, 151, 171);
+    color: rgb(103, 129, 152);
     text-align: center;
     padding: 10px;
     font-size: 20px;
 }
-.container{
+
+.container {
     width: 100%;
     height: 100vh;
-    background: #149776;
+    background: #0c8a6b;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.calculator{
+
+.calculator {
     background: #3a4452;
-    padding: 20px;
     border-radius: 15px;
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.calculator form input{
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 20px rgba(149, 70, 34, 0.94),5px 5px 15px rgba(0, 0, 0, 0.2);
-    background: #4f5252;
-    font-size: 20px;
-    color: #aecddf;
-    cursor: pointer;
-    margin: 20px;
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
 }
-form .display{
+
+form .display {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
-form .display input{
+
+form .display input {
     text-align: right;
-    flex: 1;
+    width: 100%;
+    height: 60px;
     font-size: 45px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: #4f5252;
+    color: #aecddf;
     box-shadow: none;
+    padding: 10px;
 }
-form input.operator{
+
+form input {
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: #4f5252;
+    color: #aecddf;
+    cursor: pointer;
+    box-shadow: -8px -8px 20px rgba(149, 70, 34, 0.94), 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+form input.operator {
     color: rgb(12, 241, 12);
 }
 
-   
+form input.equal {
+    background: #4f5252;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form div input {
+    flex: 1;
+    margin: 2px;
+    height: 60px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    form .display input {
+        font-size: 35px;
+    }
+
+    form div input {
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    form .display input {
+        font-size: 30px;
+    }
+
+    form div input {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+
+  
